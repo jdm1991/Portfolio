@@ -1,0 +1,60 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.aboutme-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px;
+    align-items: start; /* Align items to the start */
+    background: rgb(252, 249, 249);
+    min-height: 100vh; /* Make sure it covers the full viewport height */
+}
+
+.aboutme-image-container { /* Renamed class for the div */
+    width: 50%; /* Div fills its grid area */
+}
+
+.aboutme-image {
+    width: 100%; /* Image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 13vw;
+    margin-top: 20.4vh;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px; /* Rounded corners with a radius of 10px */
+}
+
+.aboutme-content {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 58vh;
+    margin-right: 9vw;
+    margin-top: 21vh;
+    height: fit-content;
+    max-width: 29rem;
+}
+
+.aboutme-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.aboutme-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .aboutme-wrapper {
+        grid-template-columns: 1fr; /* Stack elements in one column on smaller screens */
+    }
+    .aboutme-image-container,
+    .aboutme-content {
+        width: 100%; /* Ensure full width on smaller screens */
+    }
+}

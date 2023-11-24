@@ -1,0 +1,113 @@
+.fullscreen-bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.welcome-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 80%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.icons-container {
+    display: flex; /* Arranges items in a row */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 20px; /* Spacing between icons */
+    margin-top: 20px; /* Space above the icons */
+}
+
+.icons-container img {
+    width: 3rem; /* Fixed width for images */
+    height: 3rem; /* Fixed height for images */
+}
+
+.proficient {
+    font-size: 1.8rem;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url('./assets/Montserrat-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.parent {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem; /* Adjust the gap between sections as needed */
+}
+
+/* Make each section take at least the full height of the viewport */
+.home-section{
+    min-height: 100vh; /* Adjust the min-height as needed */
+    padding: 20px; /* Add padding as necessary */
+}
+
+.portfolio-section {
+    min-height: 100vh; /* Adjust the min-height as needed */
+    padding: 20px; /* Add padding as necessary */
+}
+
+.aboutme-section {
+    min-height: 100vh; /* Adjust the min-height as needed */
+    padding: 20px; /* Add padding as necessary */
+}
+
+.contact-section {
+    min-height: 100vh; /* Adjust the min-height as needed */
+    padding: 20px; /* Add padding as necessary */
+}
+
+/* If you want your header to stay at the top of the page */
+.h1-header {
+    grid-row: 1;
+    position: sticky;
+    top: 0;
+    z-index: 10; /* Ensure the header stays on top */
+    background: white; /* Or any background to ensure text readability */
+}
+
+/* Additional styles for the aboutme-section to ensure visibility */
+.aboutme-section {
+    position: relative; /* Adjust position as needed */
+    /* If you have set a background or need to raise the layer */
+    z-index: 1;
+}
+
+/* Optional: If you have a footer and want it to stay at the bottom */
+.footer {
+    grid-row: -1;
+}
+
+.portfolio-section {
+    z-index: 1;
+}
+
+.page-fade-in {
+    animation: fadeInEffect 1s;
+}
+
+@keyframes fadeInEffect {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
