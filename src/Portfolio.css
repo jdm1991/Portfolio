@@ -1,5 +1,31 @@
+/* CSS for Portfolio Section */
 .portfolio-container {
     display: grid;
-    place-items: center;
-    min-height: 100vh; /* This ensures the container takes at least the full viewport height */
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    gap: 20px;
+    align-items: start; /* Align items to the start */
+    padding: 20px; /* Optional: Add padding for spacing around the grid */
+    justify-content: space-between;
+}
+
+.project-1, .project-2, .project-3 {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: fit-content;
+    /* Additional styling as needed */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Stack elements in one column */
+    }
+}
+
+/* Optional: Hover effects for projects */
+.project-1:hover, .project-2:hover, .project-3:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }

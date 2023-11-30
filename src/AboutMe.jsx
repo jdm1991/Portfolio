@@ -20,7 +20,6 @@ export default function AboutMe() {
     }, []);
 
     return (
-        <div className="page-fade-in">
             <div className="aboutme-wrapper">
                 <div className='aboutme-image-container'>
                     <img src={JackPic} alt="Jack" className="aboutme-image" />
@@ -36,9 +35,8 @@ export default function AboutMe() {
                 </div>
                 <div className="aboutme-content">
                     <h2>About Me:</h2>
-                    <p>Your about me description...</p>
+                    <p>As a motivated and skilled Junior Full Stack Software Developer, I bring a unique blend of foundational knowledge in both front-end and back-end technologies. My experience includes developing responsive user interfaces, implementing dynamic client-side scripting, and building robust server-side applications. <br /><br /> With a strong commitment to writing clean, maintainable code, I excel in collaborative environments where my passion for learning and my ability to adapt to new technologies and frameworks contribute to the success of complex software projects. My proactive approach to problem-solving and eagerness to embrace the latest industry trends make me a valuable asset to any development team seeking innovation and efficiency.</p>
                 </div>
             </div>
-        </div>
     );
 }
