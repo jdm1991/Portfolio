@@ -6,7 +6,7 @@ html, body {
 
 .aboutme-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
     gap: 20px;
     align-items: start; /* Align items to the start */
     background: rgb(252, 249, 249);
@@ -14,25 +14,42 @@ html, body {
 }
 
 .aboutme-image-container { /* Renamed class for the div */
-    width: 50%; /* Div fills its grid area */
+    width: 70%; /* Div fills its grid area */
 }
 
 .aboutme-image {
-    width: 100%; /* Image fills its container */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 13vw;
+    width: 90%; /* Image fills its container */
+    height: 80%; /* Maintain aspect ratio */
+    margin-left: 7vw;
     margin-top: 20.4vh;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px; /* Rounded corners with a radius of 10px */
 }
 
-.aboutme-content {
-    background-color: white;
+.aboutme-details {
+    background-color: rgba(2, 107, 48, 0.82);
     padding: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     height: 58vh;
-    margin-right: 9vw;
+    color: white;
+    margin-right: 5vw;
+    margin-top: 21vh;
+    height: fit-content;
+    max-width: 29rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aboutme-content {
+    background-color: rgba(2, 107, 48, 0.82);
+    padding: 20px;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 58vh;
+    margin-right: 5vw;
     margin-top: 21vh;
     height: fit-content;
     max-width: 29rem;
@@ -57,4 +74,15 @@ html, body {
     .aboutme-content {
         width: 100%; /* Ensure full width on smaller screens */
     }
+}
+
+.aboutme-image:hover {
+    transform: scale(1.05); /* Enlarges the image by 5% */
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* CSS for "About Me" box hover effect */
+.aboutme-content:hover {
+    transform: scale(1.05); /* Enlarges the box by 5% */
+    transition: transform 0.3s ease; /* Smooth transition effect */
 }
