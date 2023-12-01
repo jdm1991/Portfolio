@@ -1,31 +1,88 @@
-/* CSS for Portfolio Section */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Sora:wght@700&display=swap');
+
+body.portfolio-page {
+    background: linear-gradient(#023402, #ffffff); /* Gradient from dark green to white */
+}
+
 .portfolio-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-    gap: 20px;
+    gap: 5rem;
     align-items: start; /* Align items to the start */
-    padding: 20px; /* Optional: Add padding for spacing around the grid */
+    padding: 1rem; /* Optional: Add padding for spacing around the grid */
     justify-content: space-between;
+    justify-items: stretch;
+    margin-left: 2.5rem;
+    text-align: center; /* Center the text for all direct children, including the header */
 }
 
 .project-1, .project-2, .project-3 {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
     background-color: white;
-    padding: 20px;
+    padding: 1rem;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    height: fit-content;
-    /* Additional styling as needed */
+    height: 65vh;
+    width: 25vw;
+    perspective: 1000px; /* Add perspective for 3D effect */
+    position: relative;
+    transform-style: preserve-3d; /* Allow 3D transformations */
+    transition: transform 0.9s; /* Smooth transformation for the entire container */
 }
 
-/* Responsive design for smaller screens */
+.project-1:hover, .project-2:hover, .project-3:hover {
+    transform: rotateY(180deg); /* Rotate on hover */
+}
+
+.project-front, .project-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back side of the flip */
+    border-radius: 10px; /* Ensure the corners are rounded */
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: flex-start; /* Start aligning children from the top */
+    align-items: center;
+    transition: transform 0.9s; /* Smooth transformation */
+}
+
+.project-front h3 {
+    margin-top: 3vh;
+    margin-left: 3.4vw; /* Add some space at the top */
+    align-self: flex-start; /* Align the heading to the start (left) */
+}
+
+.project-front img {
+    width: 90%;      
+    height: auto;      
+    object-fit: contain; 
+    border-radius: 10px; 
+    margin-top: 4rem; /* Add space between the heading and the image */
+}
+
+.project-back {
+    transform: rotateY(180deg); /* Flip the back side */
+    background-color: #f3f3f3; /* Example background color */
+}
+
+.portfolio-header {
+    grid-column: 1 / -1; /* Span all columns */
+    text-align: center; /* Center the text */
+    height: 1vh;
+    margin-top: 12vh;
+    color: white;
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5rem;
+}
+
 @media (max-width: 768px) {
     .portfolio-container {
         grid-template-columns: 1fr; /* Stack elements in one column */
     }
-}
-
-/* Optional: Hover effects for projects */
-.project-1:hover, .project-2:hover, .project-3:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
 }

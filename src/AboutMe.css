@@ -1,7 +1,5 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+.aboutme-body {
+    background: linear-gradient(#023402, #ffffff); /* Gradient from dark green to white */
 }
 
 .aboutme-wrapper {
@@ -9,7 +7,6 @@ html, body {
     grid-template-columns: 1fr 1fr 1fr; /* Two equal columns */
     gap: 20px;
     align-items: start; /* Align items to the start */
-    background: linear-gradient(to top, rgb(148, 145, 145), #c0bcbc 10%, #ddd 80%, white);
     min-height: 100vh; /* Make sure it covers the full viewport height */
 }
 
@@ -21,7 +18,7 @@ html, body {
     width: 90%; /* Image fills its container */
     height: 80%; /* Maintain aspect ratio */
     margin-left: 7vw;
-    margin-top: 20.9vh;
+    margin-top: 18vh;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px; /* Rounded corners with a radius of 10px */
 }
@@ -34,12 +31,12 @@ html, body {
     height: 58vh;
     color: black;
     margin-right: 5vw;
-    margin-top: 21vh;
-    height: fit-content;
+    margin-top: 18vh;
+    height: 78vh;
     max-width: 29rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    
 }
 
 .aboutme-content {
@@ -48,10 +45,10 @@ html, body {
     color: black;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
-    height: 58vh;
+    height: 56vh;
     margin-right: 5vw;
-    margin-top: 21vh;
-    height: fit-content;
+    margin-top: 18vh;
+    height: 78vh;
     max-width: 29rem;
 
 }
@@ -78,12 +75,17 @@ html, body {
 }
 
 .aboutme-image:hover {
-    transform: scale(1.00); /* Enlarges the image by 5% */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transform: scale(1.05); /* Enlarges the image by 10% */
+    transition: transform 0.9s ease; /* Smooth transition effect */
+}
+
+.aboutme-details:hover {
+    transform: scale(1.05);
+    transition: transform 0.9s ease;
 }
 
 /* CSS for "About Me" box hover effect */
 .aboutme-content:hover {
     transform: scale(1.05); /* Enlarges the box by 5% */
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.9s ease; /* Smooth transition effect */
 }
